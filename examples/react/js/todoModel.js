@@ -28,10 +28,11 @@ var app = app || {};
 		this.onChanges.forEach(function (cb) { cb(); });
 	};
 
-	app.TodoModel.prototype.addTodo = function (title) {
+	app.TodoModel.prototype.addTodo = function (title,body) {
 		this.todos = this.todos.concat({
 			id: Utils.uuid(),
 			title: title,
+            body: body,
 			completed: false
 		});
 
@@ -68,9 +69,9 @@ var app = app || {};
 		this.inform();
 	};
 
-	app.TodoModel.prototype.save = function (todoToSave, text) {
+	app.TodoModel.prototype.save = function (todoToSave, text, body) {
 		this.todos = this.todos.map(function (todo) {
-			return todo !== todoToSave ? todo : Utils.extend({}, todo, {title: text});
+			return todo !== todoToSave ? todo : Utils.extend({}, todo, {title: text},{title: body});
 		});
 
 		this.inform();

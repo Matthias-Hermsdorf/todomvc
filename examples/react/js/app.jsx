@@ -12,6 +12,7 @@ var app = app || {};
 	app.ACTIVE_TODOS = 'active';
 	app.COMPLETED_TODOS = 'completed';
 	var TodoFooter = app.TodoFooter;
+	var TestObj = app.TestObj;
 	var TodoItem = app.TodoItem;
 
 	var ENTER_KEY = 13;
@@ -131,6 +132,9 @@ var app = app || {};
 					/>;
 			}
 
+            var testObj = 
+                    <TestObj />;
+
 			if (todos.length) {
 				main = (
 					<section className="main">
@@ -162,6 +166,7 @@ var app = app || {};
 					</header>
 					{main}
 					{footer}
+                    {testObj}
 				</div>
 			);
 		}
