@@ -5,8 +5,11 @@ var fs = require('fs');
 var learnJson = require('./learn.json');
 
 var app = module.exports = express();
+var server = require('http').createServer(app);
 var favicon = require('serve-favicon');
 
+server.listen(3005);
+console.log("localhost:3005");
 app.use(express.static(__dirname));
 app.use(favicon(__dirname + '/site-assets/favicon.ico'));
 
