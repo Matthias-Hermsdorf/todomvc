@@ -12,6 +12,7 @@ var app = app || {};
 	app.ACTIVE_TODOS = 'active';
 	app.COMPLETED_TODOS = 'completed';
 	var TodoFooter = app.TodoFooter;
+	var TestObj = app.TestObj;
 	var TodoItem = app.TodoItem;
 
 	var ENTER_KEY = 13;
@@ -131,6 +132,9 @@ var app = app || {};
 					/>;
 			}
 
+            var testObj = 
+                    <TestObj />;
+
 			if (todos.length) {
 				main = (
 					<section className="main">
@@ -141,7 +145,7 @@ var app = app || {};
 							checked={activeTodoCount === 0}
 						/>
 						<ul className="todo-list">
-							{todoItems}
+							{TestObj}
 						</ul>
 					</section>
 				);
@@ -162,6 +166,11 @@ var app = app || {};
 					</header>
 					{main}
 					{footer}
+<<<<<<< HEAD
+					<testObj />
+=======
+                    {testObj}
+>>>>>>> 50eb1d1dec817ea1a13a80caff728fa5c2d7b3e8
 				</div>
 			);
 		}
