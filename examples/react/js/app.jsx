@@ -141,7 +141,7 @@ var app = app || {};
 							checked={activeTodoCount === 0}
 						/>
 						<ul className="todo-list">
-							{todoItems}
+							{TestObj}
 						</ul>
 					</section>
 				);
@@ -162,6 +162,7 @@ var app = app || {};
 					</header>
 					{main}
 					{footer}
+					<testObj />
 				</div>
 			);
 		}
