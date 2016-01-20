@@ -6,6 +6,7 @@
 var app = app || {};
 
 (function () {
+<<<<<<< HEAD
     'use strict';
 
     app.TestObj = React.createClass({
@@ -15,4 +16,13 @@ var app = app || {};
             );
         }
     });
+=======
+	'use strict';
+
+	app.TestObj = React.createClass({
+		render: function () {
+			return <div className="test-obj">testObj</div> ;
+		}
+	});
+>>>>>>> 50eb1d1dec817ea1a13a80caff728fa5c2d7b3e8
 })();
